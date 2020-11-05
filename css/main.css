@@ -112,6 +112,29 @@ a:hover {
   grid-column: 3 / 4;
 }
 
+.wind__direction {
+  --size: 6rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, .5);
+  display: grid;
+  place-items: center;
+}
+
+.wind__arrow {
+  --direction: 45deg;
+  --size: 1rem;
+  height: calc(var(--size) * 3);
+  width: var(--size);
+  background-color: var(--clr-accent-dark);
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  transform: translateY(-50%)
+  rotate(var(--direction));
+  transform-origin: bottom center;
+  
+}
+
 .info {
   grid-column: 1 / 3;
 }
