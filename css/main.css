@@ -110,6 +110,15 @@ a:hover {
 
 .wind {
   grid-column: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content 1fr;
+  align-self: start;
+}
+
+.wind .section-title,
+.wind .reading {
+  grid-column: 2 / 3;
 }
 
 .wind__direction {
@@ -120,6 +129,7 @@ a:hover {
   background-color: rgba(255, 255, 255, .5);
   display: grid;
   place-items: center;
+  grid-row: 1 / span 2;
 }
 
 .wind__arrow {
